@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 
-
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="friends, 开朗的小蔡">
@@ -52,7 +51,7 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 	<script src="https://v1.hitokoto.cn/?c=d&encode=js&select=%23hitokoto" defer></script>
-	<link rel="stylesheet" href="/js/prism/prism.css">
+	
 <meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="开朗的小蔡" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
@@ -418,6 +417,11 @@
         
 
         
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
 
         <div class="card-content article-card-content">
             <div id="articleContent">
@@ -547,6 +551,28 @@
     
 
     
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC81OTM5MS8zNTg1Mw==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
 
     
 
@@ -653,11 +679,17 @@
 
 <!-- 代码语言 -->
 
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
 
 <!-- 代码块复制 -->
 
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
 
 <!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
 
@@ -883,7 +915,7 @@
 </div>
     </div>
 </footer>
-<script src="/js/prism/prism.js" async></script>
+
 <div class="progress-bar"></div>
 
 
@@ -1034,15 +1066,6 @@ $(function () {
 
     
     
-    
-        
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/libs/others/sakura.js"><\/script>');
-            }
-        </script>
     
 
     <!-- 雪花特效 -->
